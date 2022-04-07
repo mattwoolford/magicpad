@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: Magic-Pad
+Version: 0.0.1
+Summary: Magic Pad is a tool designed for use in a restaurant environment that can help eradicate bottlenecks, reduce common service errors and substitute pen and paper with a more informative alternative.
+Author: Matt Woolford
+Author-email: matt@mattwoolford.co.uk
+License: Proprietary
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Magic Pad
+Copyright © Matt Woolford - All Rights Reserved
+ * Unauthorised copying of this directory or any of the files contained within, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Matt Woolford <matt@mattwoolford.co.uk>, March 2022
+
+Magic Pad is a tool designed for use in a restaurant environment that can help eradicate bottlenecks, reduce common service errors and substitute pen and paper with a more informative alternative.
+

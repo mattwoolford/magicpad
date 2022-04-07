@@ -1,8 +1,52 @@
+@import './Colors.css';
+
+@import url("https://p.typekit.net/p.css?s=1&k=esc4xdh&ht=tk&f=9938.9941.37545.37546.37547.37548&a=6013426&app=typekit&e=css");
+
+@font-face {
+  font-family:"museo-sans-rounded";
+  src:url("https://use.typekit.net/af/00279f/000000000000000077359942/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/00279f/000000000000000077359942/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/00279f/000000000000000077359942/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:300;
+}
+
+@font-face {
+  font-family:"museo-sans-rounded";
+  src:url("https://use.typekit.net/af/7d47d7/000000000000000077359965/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/7d47d7/000000000000000077359965/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/7d47d7/000000000000000077359965/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:500;
+}
+
+@font-face {
+  font-family:"work-sans";
+  src:url("https://use.typekit.net/af/c0e675/00000000000000007735c159/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/c0e675/00000000000000007735c159/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/c0e675/00000000000000007735c159/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:600;
+}
+
+@font-face {
+  font-family:"work-sans";
+  src:url("https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:700;
+}
+
+@font-face {
+  font-family:"work-sans";
+  src:url("https://use.typekit.net/af/328fcd/00000000000000007735c170/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff2"),url("https://use.typekit.net/af/328fcd/00000000000000007735c170/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff"),url("https://use.typekit.net/af/328fcd/00000000000000007735c170/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:800;
+}
+
+@font-face {
+  font-family:"work-sans";
+  src:url("https://use.typekit.net/af/a165fb/00000000000000007735c168/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff2"),url("https://use.typekit.net/af/a165fb/00000000000000007735c168/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff"),url("https://use.typekit.net/af/a165fb/00000000000000007735c168/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:900;
+}
+
+
 body {
+  padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  font-weight: 300;
+  font-size: 12pt;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +54,360 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: museo-sans-rounded, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  min-height: 100%;
+}
+
+body, body * {
+  display: inline-flex;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+div#root, div.App {
+  min-height: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 900;
+  margin: 0;
+}
+
+h1 {
+  font-size: 25pt;
+}
+
+h2 {
+  font-size: 18pt;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 12pt;
+  font-weight: 600;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  color: var(--very-dark-gray, black);
+  font-weight: 300;
+  font-size: 12pt;
+}
+
+p strong, p.error, p.response {
+  font-weight: 500;
+}
+
+p.error {
+  color: var(--red, red);
+}
+
+p.response {
+  color: var(--green, green);
+}
+
+p:empty {
+  display: none;
+}
+
+form {
+  width: 90%;
+  max-width: 400pt;
+  padding: 20pt;
+  border: 2pt solid var(--light-gray, lightgray);
+  border-radius: 10pt;
+  -webkit-transition: border 0.2s ease-in-out;
+  -moz-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+  will-change: border;
+  font-size: 12pt;
+}
+
+@media only screen and (orientation: portrait){
+
+  form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+form.float {
+  box-shadow: 0 0 10pt -6pt var(--black, black);
+}
+
+form:hover {
+  border-color: var(--light-blue, lightblue);
+}
+
+form + form {
+  margin-top: 20pt;
+}
+
+form h3 {
+  margin-bottom: 10pt;
+}
+
+input, select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  font-size: inherit;
+  font-family: work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+input + input, input + select, select + select {
+  margin-top: 10pt;
+}
+
+input[type="text"], input[type="password"] {
+  background-color: var(--very-light-gray, lightgray);
+  padding: 0.5em 2ex;
+  border-radius: calc(1em + 2pt);
+  outline: none;
+  color: var(--dark-gray, darkgray);
+  border: 2pt solid var(--very-light-gray, lightgray);
+  -webkit-transition: border 0.2s ease-in-out;
+  -moz-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+  will-change: border;
+}
+
+input[type="text"]:hover, input[type="password"]:hover, input[type="text"]:focus, input[type="password"]:focus {
+  border-color: var(--gray, darkgray);
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: var(--gray, gray);
+  -webkit-transition: color 0.2s ease-in-out;
+  will-change: color;
+}
+
+input[type="text"]:hover::-webkit-input-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="text"]::-moz-placeholder {
+  color: var(--gray, gray);
+  -moz-transition: color 0.2s ease-in-out;
+  will-change: color;
+}
+
+input[type="text"]:hover::-moz-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="text"]:-moz-placeholder {
+  color: var(--gray, gray);
+  -moz-transition: color 0.2s ease-in-out;
+  will-change: color;
+}
+
+input[type="text"]:hover:-moz-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="text"]:-ms-input-placeholder {
+  color: var(--gray, gray);
+  transition: color 0.2s ease-in-out;
+  will-change: color;
+}
+
+input[type="text"]:hover:-ms-input-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="password"]::-webkit-input-placeholder {
+  color: var(--gray, gray);
+  -webkit-transition: color 0.2s ease-in-out;
+  will-change: color;
+}
+
+input[type="password"]:hover::-webkit-input-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="password"]::-moz-placeholder {
+  color: var(--gray, gray);
+  -moz-transition: color 0.2s ease-in-out;
+  will-change: color;
+}
+
+input[type="password"]:hover::-moz-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="password"]:-moz-placeholder {
+  color: var(--gray, gray);
+  -moz-transition: color 0.2s ease-in-out;
+  will-change: color;
+}
+
+input[type="password"]:hover:-moz-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="password"]:-ms-input-placeholder {
+  color: var(--gray, gray);
+  transition: color 0.2s ease-in-out;
+  will-change: color;
+}
+
+input[type="password"]:hover:-ms-input-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="text"]:focus::-webkit-input-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="text"]:focus::-moz-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="text"]:focus:-moz-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="text"]:focus:-ms-input-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="password"]:focus::-webkit-input-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="password"]:focus::-moz-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="password"]:focus:-moz-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="password"]:focus:-ms-input-placeholder {
+  color: var(--dark-gray, darkgray);
+}
+
+input[type="submit"], input[type="button"] {
+  padding: 0.5em 2ex;
+  border-radius: calc(1em + 2pt);
+  background-color: var(--red, red);
+  color: var(--white, white);
+  border: 2pt solid var(--red, red);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  -webkit-transition: border 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -moz-transition: border 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  will-change: border, color, background-color, opacity;
+  cursor: pointer;
+}
+
+input[type="button"]:not(.red), input[type="submit"].blue {
+  border-color: var(--blue, blue);
+  background-color: var(--blue, blue);
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+  background-color: var(--white, white);
+  color: var(--dark-gray, darkgray);
+  border-color: var(--dark-gray, darkgray);
+}
+
+input[type="file"] {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+input:disabled {
+  background-color: var(--light-gray, lightgray) !important;
+  border-color: var(--light-gray, lightgray) !important;
+  color: var(--white-static, white) !important;
+  cursor: not-allowed;
+}
+
+select {
+  width: 100%;
+  height: 30pt;
+  line-height: 28pt;
+  border-radius: 15pt;
+  padding: 0 15pt;
+  color: var(--gray, gray);
+  cursor: pointer;
+  outline: none;
+  border: 2pt solid var(--gray, gray);
+  background-color: var(--white, white);
+  -webkit-transition: border 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -moz-transition: border 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  will-change: border, color, background-color;
+}
+
+select:hover {
+  background-color: var(--light-gray, lightgray);
+  border-color: var(--light-gray, lightgray);
+  color: var(--white, white);
+}
+
+select:disabled {
+  background-color: var(--very-light-gray, white);
+  color: var(--light-gray, lightgray);
+  border-color: var(--light-gray, lightgray);
+}
+
+label {
+  font-family: museo-sans-rounded, work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 11pt;
+  margin: 0 0 10pt;
+  display: inline-block;
+}
+
+input + label, select + label {
+  margin-top: 10pt;
 }

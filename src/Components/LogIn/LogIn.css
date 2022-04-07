@@ -1,0 +1,40 @@
+div.login {
+    width: 100%;
+    background-color: var(--blue, white);
+    justify-content: center;
+    align-items: center;
+}
+
+div.login form.login-form {
+    background-color: var(--white-translucent, white);
+    max-width: min(90%, 500pt);
+}
+
+div.login form.login-form.show-qr-code {
+    padding: 0;
+    position: relative;
+}
+
+div.login form.login-form.show-qr-code video {
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+div.login form.login-form.show-qr-code div.input-container {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto 10pt;
+}
+
+div.login form.login-form.show-qr-code div.input-container h3 {
+    text-align: center;
+    width: 80%;
+    align-self: center;
+    color: var(--white-static, white);
+    text-shadow: 0 0 10pt var(--black, black);
+}

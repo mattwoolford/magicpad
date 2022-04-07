@@ -1,0 +1,363 @@
+div.pad-checklist {
+    background-color: var(--white-translucent, white);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 10pt 20pt 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    -webkit-transform: translate3d(0, -100vh, 0);
+    -moz-transform: translate3d(0, -100vh, 0);
+    -ms-transform: translate3d(0, -100vh, 0);
+    -o-transform: translate3d(0, -100vh, 0);
+    transform: translate3d(0, -100vh, 0);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out; /* Chrome < 26, Safari < 7 */
+    -moz-transition: -moz-transform 0.3s ease-in-out; /* Firefox < 16 */
+    -o-transition: -o-transform 0.3s ease-in-out; /* Opera < 12.10 */
+    transition: -webkit-transform 0.3s ease-in-out; /* Chrome 26-35, Safari, Opera 15-23 */
+    transition: transform 0.3s ease-in-out; /* IE10+, Firefox 16+, Chrome 36+, Opera 12.10 */
+    will-change: -webkit-transform, -moz-transform, -o-transform, transform;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+div.pad-checklist::-webkit-scrollbar {
+    display: none;
+}
+
+div.pad-checklist.open {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+div.pad-checklist div.pad-checklist-header {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    scroll-snap-align: start;
+}
+
+@media only screen and (orientation: landscape){
+
+    div.pad-checklist {
+        align-items: flex-end;
+        flex-direction: row-reverse;
+        scroll-snap-type: none;
+        overflow-y: hidden;
+    }
+
+    div.pad-checklist div.pad-checklist-header {
+        width: 50%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+div.pad-checklist > form {
+    display: none;
+}
+
+div.pad-checklist div.pad-checklist-header form {
+    border: none;
+    width: 50%;
+    align-items: center;
+}
+
+@media only screen and (orientation: portrait){
+
+    div.pad-checklist {
+        padding-top: 50pt;
+        scroll-padding-top: 50pt;
+    }
+
+    div.pad-checklist div.pad-checklist-header form {
+        padding: 0 0 20pt;
+    }
+
+    div.pad-checklist > form {
+        display: inline-flex;
+        border: none;
+        width: 50%;
+        justify-content: flex-start;
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    div.pad-checklist div.pad-checklist-list-container.no-scroll {
+        overflow-y: hidden;
+    }
+
+}
+
+div.pad-checklist div.pad-checklist-list-container {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 100%;
+    padding-top: 4pt;
+    scroll-padding-top: 4pt;
+    scroll-snap-align: start;
+}
+
+@media only screen and (orientation: landscape){
+
+    div.pad-checklist div.pad-checklist-list-container {
+        width: 50%;
+        padding-top: 50pt;
+        height: 100%;
+        scroll-padding-top: 50pt;
+    }
+
+}
+
+div.pad-checklist div.pad-checklist-list-container::-webkit-scrollbar {
+    display: none;
+}
+
+div.pad-checklist div.pad-checklist-list-container > h2 {
+    color: var(--dark-gray, darkgray);
+    scroll-snap-align: start;
+}
+
+div.pad-checklist div.pad-checklist-list-container div.pad-checklist-message {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    scroll-snap-align: start;
+}
+
+@media only screen and (orientation: landscape){
+
+    div.pad-checklist div.pad-checklist-list-container div.pad-checklist-message {
+        justify-content: center;
+    }
+
+}
+
+div.pad-checklist form input {
+    width: 100%;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list {
+    width: 100%;
+    height: auto;
+    padding-inline-start: 0;
+    padding: 0;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item {
+    width: calc(100% - 6pt); /* -6pt to prevent drop shadow clipping */
+    margin-left: 3pt;
+    height: auto;
+    max-height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-align: start;
+    scroll-snap-type: y mandatory;
+    background-color: var(--white, white);
+    margin-bottom: 10pt;
+    box-shadow: 0 0 10pt -6pt var(--black, black);
+    padding: 5pt 10pt;
+    border-radius: 20pt;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    scroll-snap-align: start;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-transition: max-height 0.4s ease-in-out, padding 0.2s ease-in-out, margin-bottom 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    -moz-transition: max-height 0.4s ease-in-out, padding 0.2s ease-in-out, margin-bottom 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    -o-transition: max-height 0.4s ease-in-out, padding 0.2s ease-in-out, margin-bottom 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: max-height 0.4s ease-in-out, padding 0.2s ease-in-out, margin-bottom 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    will-change: max-height, padding, margin-bottom, box-shadow;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item.hide {
+    max-height: 0;
+    padding: 0 10pt;
+    box-shadow: 0 0 10pt -6pt var(--black, black);
+    margin-bottom: 0;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item::-webkit-scrollbar {
+    display: none;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-user-area {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10pt 0 0;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-user-area div.pad-checklist-item-user {
+    width: auto;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 10pt;
+    margin-bottom: 5pt;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-user-area div.pad-checklist-item-user img {
+    height: 1.75em;
+    width: 1.75em;
+    object-fit: cover;
+    margin-right: 1ex;
+    border-radius: 50%;
+    border: 2pt solid var(--light-gray, lightgray);
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-user-area div.pad-checklist-item-user p {
+    font-family: museo-sans-rounded, work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: inherit;
+    color: var(--gray, gray);
+    margin: 0;
+}
+
+@media only screen and (orientation: landscape){
+
+    div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-user-area div.pad-checklist-item-user:nth-child(even){
+        justify-content: flex-end;
+    }
+
+}
+
+@media only screen and (min-width: 500px){
+
+    div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-user-area div.pad-checklist-item-user {
+        font-size: 12pt;
+    }
+
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-indicator {
+    width: 8pt;
+    height: 8pt;
+    background-color: var(--green, green);
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 8pt;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item.alert div.pad-checklist-item-indicator {
+    background-color: var(--light-red, coral);
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item h2 {
+    width: auto;
+    max-width: calc(100% - 25pt);
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex-grow: 1;
+    line-height: 33pt;
+    font-size: 12pt;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-tag {
+    background-color: var(--very-light-gray, lightgray);
+    width: 100%;
+    height: 20pt;
+    padding: 0 10pt;
+    margin-top: 5pt;
+    border-radius: 15pt;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-tag:first-of-type {
+    margin-top: 10pt;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-tag p {
+    margin: 0;
+    line-height: 20pt;
+    font-size: 11pt;
+}
+
+@media only screen and (min-width: 500px) {
+
+    div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-indicator {
+        width: 10pt;
+        height: 10pt;
+        margin-right: 10pt;
+    }
+
+    div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item {
+        padding: 10pt 20pt;
+    }
+
+    div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item.hide {
+        padding: 0 20pt;
+    }
+
+    div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item h2 {
+        font-size: 18pt;
+    }
+
+    div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-tag {
+        height: 30pt;
+        padding: 5pt 10pt;
+    }
+
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item form {
+    max-width: unset;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item div.pad-checklist-item-tag + form {
+    margin-top: 10pt;
+    scroll-snap-align: start;
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item form input {
+    width: auto;
+    background-color: var(--green, green);
+    border-color: var(--green, green);
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item form input.red {
+    background-color: var(--red, red);
+    border-color: var(--red, red);
+}
+
+div.pad-checklist div.pad-checklist-list-container ul.pad-checklist-list li.pad-checklist-item form input:hover {
+    background-color: var(--white, white);
+    border-color: var(--dark-gray, darkgray)
+}

@@ -1,0 +1,67 @@
+div.section-button {
+    width: calc(100% / 4);
+    height: auto;
+    min-height: 55pt;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    scroll-snap-align: start;
+}
+
+div.section-button, div.section-button * {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 500pt){
+
+    div.section-button {
+        width: calc(100% / 8);
+    }
+
+}
+
+div.section-button div.section-button-image-container {
+    background: var(--red, red) linear-gradient(135deg, var(--white, white) 0%, var(--white, white) 25%, var(--light-red, coral) 75%, var(--red, red) 100%) right bottom;
+    background-size: 200%;
+    width: 40pt;
+    height: 40pt;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 10pt 0 5pt 0;
+    -webkit-transition: background-position 0.2s ease-out;
+    -moz-transition: background-position 0.2s ease-out;
+    -o-transition: background-position 0.2s ease-out;
+    transition: background-position 0.2s ease-out;
+    will-change: background-position;
+}
+
+div.section-button:hover div.section-button-image-container {
+    background-position: 50% 50%;
+}
+
+
+div.section-button div.section-button-image-container img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    height: 60%;
+    width: 60%;
+    object-fit: contain;
+}
+
+div.section-button p {
+    display: inline-block;
+    font-family: work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    width: 100%;
+    min-height: 10pt;
+    font-size: 9pt;
+    margin: 0;
+    text-align: center;
+    word-wrap: normal;
+    color: var(--dark-gray, darkgray);
+}
+
+div.section-button:hover p {
+    color: var(--gray, gray);
+}

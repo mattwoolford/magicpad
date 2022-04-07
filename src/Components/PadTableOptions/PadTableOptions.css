@@ -1,0 +1,63 @@
+div.pad-table-options {
+    /*min-width: 100pt;*/
+    width: 100%;
+    /*max-width: min(300pt, 60%);*/
+    height: 40pt;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: right 0.5s ease-in-out;
+    -moz-transition: right 0.5s ease-in-out;
+    -o-transition: right 0.5s ease-in-out;
+    transition: right 0.5s ease-in-out;
+}
+
+@media only screen and (orientation: landscape){
+
+    div.pad-table-options {
+        /*max-width: min(300pt, 50%);*/
+        width: 50%;
+        right: 50%;
+    }
+
+    div.pad.disabled ~ div.pad-table-options {
+        right: 0;
+    }
+
+}
+
+div.pad-table-options form.pad-table-options-form {
+    width: 100%;
+    height: 90%;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: unset;
+    flex-direction: row;
+    padding: 0 5%;
+    max-width: unset;
+}
+
+div.pad-table-options form.pad-table-options-form.right-align {
+    justify-content: flex-end;
+}
+
+div.pad-table-options form.pad-table-options-form input[type="button"] {
+    background-color: var(--white, white);
+    border-color: var(--white, white);
+}
+
+div.pad-table-options form.pad-table-options-form select.pad-table-options-table-select-input {
+    box-shadow: 0 0 10pt -6pt var(--black, black);
+    border-color: var(--white, white);
+    width: auto;
+}
+
+div.pad-table-options form.pad-table-options-form select.pad-table-options-table-select-input:hover {
+    background-color: var(--white, white);
+    color: var(--light-gray, lightgray);
+}

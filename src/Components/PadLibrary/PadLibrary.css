@@ -1,0 +1,358 @@
+@keyframes pad-library-add-confirmation-fade {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes pad-library-add-confirmation-zoom {
+    0% {
+        background-size: 200%;
+        -webkit-transform: scale(5) translate3d(0, 0, 0);
+        -moz-transform: scale(5) translate3d(0, 0, 0);
+        -ms-transform: scale(5) translate3d(0, 0, 0);
+        -o-transform: scale(5) translate3d(0, 0, 0);
+        transform: scale(5) translate3d(0, 0, 0);
+        opacity: 0;
+        box-shadow: 0 0 30pt -10pt var(--black, black);
+    }
+
+    30% {
+        -webkit-transform: scale(1) translate3d(0, 0, 0);
+        -moz-transform: scale(1) translate3d(0, 0, 0);
+        -ms-transform: scale(1) translate3d(0, 0, 0);
+        -o-transform: scale(1) translate3d(0, 0, 0);
+        transform: scale(1) translate3d(0, 0, 0);
+        opacity: 1;
+        box-shadow: 0 0 20pt -5pt var(--black, black);
+    }
+
+    50% {
+        background-size: 135%;
+    }
+
+    70% {
+        -webkit-transform: scale(0.85) translate3d(0, 0, 0);
+        -moz-transform: scale(0.85) translate3d(0, 0, 0);
+        -ms-transform: scale(0.85) translate3d(0, 0, 0);
+        -o-transform: scale(0.85) translate3d(0, 0, 0);
+        transform: scale(0.85) translate3d(0, 0, 0);
+    }
+
+    100% {
+        background-size: 200%;
+        -webkit-transform: scale(0) translate3d(0, 0, 0);
+        -moz-transform: scale(0) translate3d(0, 0, 0);
+        -ms-transform: scale(0) translate3d(0, 0, 0);
+        -o-transform: scale(0) translate3d(0, 0, 0);
+        transform: scale(0) translate3d(0, 0, 0);
+        box-shadow: 0 0 10pt -6pt var(--black, black);
+    }
+}
+
+div.pad-library {
+    width: 50%;
+    height: 100%;
+    padding: 10pt 20pt 0 20pt;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--white, white);
+}
+
+div.pad-library div.pad-library-add-confirmation {
+    display: none;
+}
+
+@media only screen and (orientation: portrait){
+
+    div.pad-library {
+        width: 100%;
+        height: 60pt; /* Changes with Javascript */
+        min-height: 60pt;
+        max-height: 90%;
+        padding: 0 10pt;
+        box-shadow: 0 0 10pt -6pt var(--black, black);
+        border-top-left-radius: 10pt;
+        border-top-right-radius: 10pt;
+        will-change: height, transition;
+        -ms-touch-action: none;
+        touch-action: none;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+
+    div.pad-library.transition {
+        -webkit-transition: height 0.3s ease-out;
+        -moz-transition: height 0.3s ease-out;
+        -o-transition: height 0.3s ease-out;
+        transition: height 0.3s ease-out;
+    }
+
+    div.pad-library.open {
+        height: 90%;
+    }
+
+    div.pad-library.open div.pad-library-add-confirmation {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: var(--white-translucent, white);
+        justify-content: center;
+        align-items: center;
+        animation: pad-library-add-confirmation-fade 0.75s ease-in-out forwards;
+    }
+
+    div.pad-library.open div.pad-library-add-confirmation div.pad-library-add-confirmation-data-container {
+        /*background: var(--light-gray, light-gray) linear-gradient(135deg, var(--white, white) 0%, var(--white, white) 40%, var(--very-light-gray, lightgray) 80%, var(--light-gray, lightgray) 100%) right bottom;*/
+        background: var(--blue, blue) linear-gradient(135deg, var(--white, white) 0%, var(--white, white) 40%, var(--light-blue, lightblue) 80%, var(--blue, blue) 100%) right bottom;
+        background-size: 200%;
+        width: 50%;
+        /*box-shadow: 0 0 10pt -6pt var(--black, black);*/
+        border-radius: 20pt;
+        animation: pad-library-add-confirmation-zoom 0.75s linear forwards;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.pad-library.open div.pad-library-add-confirmation div.pad-library-add-confirmation-data-container:before {
+        content: '';
+        width: 100%;
+        padding-bottom: 100%;
+        position: relative;
+        z-index: -1;
+    }
+
+    div.pad-library.open div.pad-library-add-confirmation div.pad-library-add-confirmation-data-container p {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-family: work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        font-size: 80pt;
+        margin: 0;
+        mix-blend-mode: difference;
+    }
+
+    div.pad-library.open div.pad-library-add-confirmation.show {
+        display: flex;
+    }
+
+}
+
+div.pad-library div.handle {
+    width: 100%;
+    height: 20pt;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+div.pad-library div.handle:after {
+    content: '';
+    display: block;
+    background-color: var(--light-gray, lightgray);
+    width: 35pt;
+    height: 5pt;
+    border-radius: 2.5pt;
+    margin-bottom: 5pt;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    will-change: background-color;
+}
+
+@media only screen and (orientation: landscape){
+
+    div.pad-library div.handle:after {
+        display: none;
+    }
+
+}
+
+div.pad-library div.handle:hover:after {
+    background-color: var(--gray, gray);
+}
+
+div.pad-library form.pad-library-search-form {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 10pt;
+}
+
+div.pad-library div.pad-library-data-container {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10pt 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: y mandatory;
+    flex: 1 1;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 100%;
+}
+
+@media only screen and (orientation: portrait){
+
+    div.pad-library:not(.open) div.pad-library-data-container {
+        display: none;
+    }
+
+}
+
+div.pad-library div.pad-library-data-container.loading {
+    overflow-y: hidden;
+}
+
+div.pad-library div.pad-library-data-container::-webkit-scrollbar {
+    display: none;
+}
+
+div.pad-library div.pad-library-data-container > * {
+    scroll-snap-align: start;
+}
+
+div.pad-library div.pad-library-data-container div.pad-library-filters, div.pad-library div.pad-library-data-container div.pad-library-recipes {
+    width: 100%;
+}
+
+div.pad-library div.pad-library-data-container div.pad-library-filters, div.pad-library div.pad-library-data-container div.pad-library-recipes div.pad-library-section, div.pad-library div.pad-library-data-container div.pad-library-recipes div.pad-library-section ul.pad-library-section-recipes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: auto;
+    padding-bottom: 20pt;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+div.pad-library div.pad-library-data-container div.pad-library-filters, div.pad-library div.pad-library-data-container div.pad-library-recipes div.pad-library-section h2 {
+    width: 100%;
+    margin-top: 10pt;
+    padding: 0 10pt;
+}
+
+div.pad-library div.pad-library-data-container div.pad-library-recipes div.pad-library-section:first-of-type h2 {
+    padding-top: 20pt;
+}
+
+div.pad-library div.pad-library-data-container div.pad-library-filters {
+    max-height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, margin 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, margin 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, margin 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, margin 0.5s ease-in-out;
+    will-change: max-height, padding, margin;
+}
+
+div.pad-library div.pad-library-data-container div.pad-library-filters::-webkit-scrollbar {
+    display: none;
+}
+
+div.pad-library div.pad-library-data-container div.pad-library-filters.hide {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+div.pad-library div.pad-library-data-container div.pad-library-recipes:empty {
+    min-height: calc(100% - 60pt);
+}
+
+div.pad-library div.pad-library-data-container div.pad-library-recipes div.pad-library-section ul.pad-library-section-recipes {
+    list-style-type: none;
+    padding: 0;
+}
+
+div.pad-library div.pad-library-data-container div.pad-library-recipes div.pad-library-section ul.pad-library-section-recipes div.recipe-tile {
+    scroll-snap-align: start;
+}
+
+div.pad-library form.pad-library-scroll-to-top-prompt-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    flex-grow: 0;
+    pointer-events: none;
+    max-width: unset;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    will-change: opacity;
+}
+
+div.pad-library form.pad-library-scroll-to-top-prompt-container.hide {
+    opacity: 0;
+}
+
+div.pad-library form.pad-library-scroll-to-top-prompt-container input {
+    box-shadow: 0 0 10pt var(--white, white);
+    pointer-events: auto;
+    flex-grow: 0;
+    width: auto;
+    position: absolute;
+    bottom: 20pt;
+    right: 20pt;
+}
+
+@media only screen and (orientation: portrait){
+
+    div.pad-library:not(.open) form.pad-library-scroll-to-top-prompt-container{
+        opacity: 0;
+    }
+
+    div.pad-library:not(.open) form.pad-library-scroll-to-top-prompt-container input {
+        pointer-events: none;
+    }
+
+}
+
+div.pad-library form.pad-library-scroll-to-top-prompt-container.hide input {
+    pointer-events: none;
+}

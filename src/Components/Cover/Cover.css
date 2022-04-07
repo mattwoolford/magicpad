@@ -1,0 +1,39 @@
+div.cover {
+    background-color: var(--blue, blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    will-change: opacity;
+}
+
+div.cover.hide {
+    pointer-events: none;
+    opacity: 0;
+}
+
+div.cover img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    width: 20%;
+    height: auto;
+}
+
+div.cover h1, div.cover p {
+    color: var(--white-static, white);
+    margin-top: 20pt;
+}
+
+div.cover div.loading-icon {
+    position: relative;
+    top: 40pt;
+}

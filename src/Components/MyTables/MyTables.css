@@ -1,0 +1,147 @@
+div.my-tables {
+    width: 100%;
+    height: auto;
+    padding: 0 20pt;
+}
+
+div.my-tables h1, div.my-tables h2 {
+    margin-bottom: 20pt;
+    scroll-snap-align: start;
+}
+
+div.my-tables ul.my-tables-list, div.my-tables > p {
+    padding: 0;
+    margin: 0 0 20pt;
+    scroll-snap-align: start;
+}
+
+div.my-tables > p {
+    color: var(--gray, gray);
+}
+
+div.my-tables ul.my-tables-list a {
+    text-decoration: none;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item {
+    padding: 10pt 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border-top: 1pt solid var(--light-gray, lightgray);
+    scroll-snap-align: start;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item, div.my-tables ul.my-tables-list li.my-tables-list-item * {
+    cursor: pointer;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item:last-of-type {
+    border-bottom: 1pt solid var(--light-gray, lightgray);
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-control-area, div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-data-area {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-control-area div.my-tables-list-item-information-area, div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-control-area div.my-tables-list-item-users-area, div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-control-area form.my-tables-list-item-options-area {
+    flex-grow: 1;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-control-area div.my-tables-list-item-information-area p {
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+    font-weight: 700;
+    font-family: work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-control-area div.my-tables-list-item-users-area {
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-control-area div.my-tables-list-item-users-area img {
+    height: 20pt;
+    width: 20pt;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2pt solid var(--light-gray, lightgray);
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-control-area div.my-tables-list-item-users-area img + img {
+    margin-left: 1ex;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-control-area form {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    min-width: unset;
+    max-width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    flex-shrink: 1;
+    -webkit-transition: max-width 0.5s ease-in-out;
+    -moz-transition: max-width 0.5s ease-in-out;
+    -o-transition: max-width 0.5s ease-in-out;
+    transition: max-width 0.5s ease-in-out;
+    will-change: max-width;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-control-area form:empty {
+    max-width: 0;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-control-area form input {
+    font-size: 10pt;
+    width: auto;
+    flex-grow: 0;
+    min-width: unset;
+    padding: 0 5pt;
+    margin: 0;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-data-area:not(:empty) {
+    padding-top: 10pt;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-data-area p {
+    font-family: work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 10pt;
+    background-color: var(--light-blue, lightblue);
+    color: var(--white-static, white);
+    margin: 0;
+    padding: 0.2em 1.5ex;
+    border-radius: 1.1em;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-data-area p.current {
+    background-color: var(--green, green);
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-data-area p.alert {
+    background-color: var(--light-red, coral);
+}
+
+div.my-tables ul.my-tables-list li.my-tables-list-item div.my-tables-list-item-data-area p + p {
+    margin-left: 1ex;
+    max-width: calc(100% - 1ex);
+}

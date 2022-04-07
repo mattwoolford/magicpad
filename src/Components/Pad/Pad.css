@@ -1,0 +1,83 @@
+div.pad {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    overscroll-behavior: contain;
+    background: repeating-linear-gradient(90deg, var(--red, red), var(--red, red) 50pt, var(--white, white) 50pt, var(--white, white) 100pt);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-transition: -webkit-filter 0.2s ease-in-out;
+    -moz-transition: filter 0.2s ease-in-out;
+    -o-transition: filter 0.2s ease-in-out;
+    transition: filter 0.2s ease-in-out;
+    will-change: -webkit-filter, filter;
+}
+
+@media only screen and (max-width: 499px){
+
+    div.pad {
+        background: repeating-linear-gradient(90deg, var(--red, red), var(--red, red) calc(100% / 7), var(--white, white) calc(100% / 7), var(--white, white) calc(100% / 3.5));
+    }
+
+}
+
+div.pad.blur {
+    -webkit-filter: blur(5pt);
+    filter: blur(5pt);
+}
+
+div.pad.disabled, div.pad.disabled * {
+    pointer-events: none;
+}
+
+div.pad.disabled:after {
+    content: 'Choose a table to start.';
+    background-color: var(--white, white);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 18pt;
+    color: var(--light-gray, lightgray);
+}
+
+div.pad-section-container {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@media only screen and (orientation: landscape){
+    div.pad-section-container {
+        width: 50%;
+    }
+}
+
+div.pad-section-container.no-scroll {
+    overflow-y: hidden !important;
+}
+
+div.pad-section-container::-webkit-scrollbar {
+    display: none;
+}
+
+div.pad div.pad-section-container div.pad-section {
+    scroll-snap-align: center;
+}

@@ -1,0 +1,27 @@
+div.admin-panel-button {
+    width: 15pt;
+    height: 15pt;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+div.admin-panel-button div.admin-panel-button-line {
+    width: 100%;
+    height: 20%;
+    background-color: var(--white, white);
+    -webkit-transition: width 0.2s ease-in-out;
+    -moz-transition: width 0.2s ease-in-out;
+    -o-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+    will-change: width;
+}
+
+div.admin-panel-button:hover div.admin-panel-button-line:nth-of-type(2) {
+    width: 75%;
+}
+
+div.admin-panel-button:hover div.admin-panel-button-line:nth-of-type(3) {
+    width: 50%;
+}

@@ -1,0 +1,63 @@
+div.pad-section {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white, white);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+@media only screen and (orientation: landscape){
+
+    div.pad-section {
+        border-right: 1pt solid var(--light-gray, lightgray);
+    }
+
+}
+
+div.pad-section h1 {
+    font-size: 60pt;
+    -webkit-user-select: none;
+    user-select: none;
+    text-align: center;
+    padding: 0 20pt;
+}
+
+div.pad-section ul.pad-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-translucent, white);
+    list-style-type: none;
+    padding: 40pt 20pt 0 20pt;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+}
+
+@media only screen and (orientation: portrait) {
+
+    div.pad-section ul.pad-area {
+        padding-bottom: 60pt;
+    }
+
+}
+
+div.pad-section ul.pad-area:not(.overflowing) {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+div.pad-section ul.pad-area:not(.overflowing)::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,250 @@
+div.recipe-tile-tag-configurator {
+    width: 100%;
+    height: auto;
+    background-color: var(--white, white);
+    padding: 0 0 10pt;
+    scroll-snap-align: start;
+    position: relative;
+    z-index: 1;
+    border-top: 2pt solid var(--very-light-gray, lightgray);
+}
+
+@media only screen and (orientation: landscape){
+
+    div.recipe-tile-tag-configurator{
+        width: calc(100% - 20pt);
+        border-radius: 20pt;
+        padding: 0 20pt 10pt;
+        box-shadow: 0 0 10pt -6pt var(--black, black);
+        border: none;
+    }
+}
+
+div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator, div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags + div.recipe-tile-tag-configurator {
+    margin-top: 20pt;
+}
+
+div.recipe-tile-tag-configurator span.recipe-tile-tag-configurator-header {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+div.recipe-tile-tag-configurator span.recipe-tile-tag-configurator-header h3 {
+    margin-top: 10pt !important;
+}
+
+div.recipe-tile-tag-configurator span.recipe-tile-tag-configurator-header p {
+    margin: 10pt 0 10pt;
+    text-align: right;
+    justify-content: flex-end !important;
+    flex-direction: row;
+    display: inline-flex;
+    flex-grow: 1;
+}
+
+@media only screen and (orientation: landscape){
+
+    div.recipe-tile-tag-configurator span.recipe-tile-tag-configurator-header h3, div.recipe-tile-tag-configurator span.recipe-tile-tag-configurator-header p {
+        margin-top: 20pt !important;
+    }
+
+}
+
+div.recipe-tile-tag-configurator h3 {
+    margin-bottom: 10pt;
+    color: var(--very-dark-gray, darkgray);
+}
+
+div.recipe-tile-tag-configurator form {
+    border-radius: 0;
+    max-width: unset;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    border-top: 2pt solid var(--very-light-gray, lightgray) !important;
+    padding: 20pt 0 0 !important;
+    flex-wrap: wrap;
+}
+
+div.recipe-tile-tag-configurator form select, div.recipe-tile-tag-configurator form input {
+    width: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 5pt 0;
+}
+
+div.recipe-tile-tag-configurator form span.recipe-tile-tag-configurator-options-area {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+@media only screen and (orientation: portrait){
+
+    div.recipe-tile-tag-configurator form span.recipe-tile-tag-configurator-options-area {
+        width: 100%;
+    }
+
+    div.recipe-tile-tag-configurator form select, div.recipe-tile-tag-configurator form input[type="text"] {
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+}
+
+div.recipe-tile-tag-configurator form input[type="button"] {
+    flex-grow: 0;
+}
+
+div.recipe-tile-tag-configurator form > select:first-child {
+    flex-grow: 0;
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 15pt;
+}
+
+div.recipe-tile-tag-configurator form select:not(:last-child), div.recipe-tile-tag-configurator form input:not(:last-child) {
+    margin-right: 10pt;
+}
+
+div.recipe-tile-tag-configurator form p.conjunctive {
+    font-family: work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 12pt;
+    margin: 0;
+    color: var(--dark-gray, darkgray);
+}
+
+div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: transparent;
+    padding: 5pt;
+}
+
+@media only screen and (orientation: landscape){
+
+    div.recipe-tile-tag-configurator form {
+        padding: 10pt 0 0 !important;
+    }
+
+    div.recipe-tile-tag-configurator form span.recipe-tile-tag-configurator-options-area {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    div.recipe-tile-tag-configurator form > select:first-child {
+        margin: 5pt 10pt 0 0;
+    }
+
+    div.recipe-tile-tag-configurator form p.conjunctive {
+        margin: 0 10pt 0 0;
+    }
+
+    div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags {
+        position: relative;
+        top: -20pt;
+        width: calc(100% - 20pt);
+        margin-bottom: -20pt;
+        box-shadow: inset 0 0 10pt -6pt var(--black, black);
+        border: 1pt solid var(--light-gray, gray);
+        padding: 30pt 10pt 10pt;
+        border-radius: 0 0 20pt 20pt;
+        background-color: var(--very-light-gray, lightgray);
+    }
+
+}
+
+div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags:empty {
+    display: none;
+}
+
+div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags div.recipe-tile-tag-configurator-tag {
+    padding: 10pt;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10pt;
+    background-color: var(--very-light-gray, lightgray);
+    box-shadow: 0 0 10pt -6pt var(--black, black);
+}
+
+@media only screen and (orientation: portrait) {
+
+    div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags div.recipe-tile-tag-configurator-tag + div.recipe-tile-tag-configurator-tag {
+        margin-top: 10pt;
+    }
+
+}
+
+div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags div.recipe-tile-tag-configurator-tag p {
+    color: var(--gray, gray);
+    font-family: work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 12pt;
+    line-height: 20pt;
+    width: auto;
+    max-width: calc(100% - 30pt);
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags div.recipe-tile-tag-configurator-tag form {
+    width: 20pt;
+    height: 20pt;
+    min-width: unset;
+    max-width: unset;
+    padding: 0;
+    border-radius: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (orientation: landscape){
+
+    div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags div.recipe-tile-tag-configurator-tag {
+        border-radius: 0;
+        padding: 0 10pt;
+        box-shadow: none;
+    }
+
+    div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags div.recipe-tile-tag-configurator-tag p {
+        line-height: 30pt;
+        font-size: 14pt;
+    }
+
+    div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags div.recipe-tile-tag-configurator-tag form {
+        width: 30pt;
+        height: 30pt;
+    }
+
+}
+
+div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags div.recipe-tile-tag-configurator-tag form input {
+    width: 20pt;
+    height: 20pt;
+    border-radius: 10pt;
+    background-color: var(--red, red);
+    border-color: var(--red, red);
+    color: var(--white-static, white);
+    margin: 0;
+    font-size: 10pt;
+    padding: 5pt;
+    box-shadow: 0 0 10pt -6pt var(--black, black);
+    line-height: 20pt;
+}
+
+div.recipe-tile-tag-configurator + div.recipe-tile-tag-configurator-tags div.recipe-tile-tag-configurator-tag form input:hover {
+    background-color: var(--light-red, coral);
+    border-color: var(--light-red, coral);
+    color: var(--white-static, white);
+}

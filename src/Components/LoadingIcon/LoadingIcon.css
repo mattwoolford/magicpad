@@ -1,0 +1,104 @@
+@import '../../Animations.css';
+
+div.loading-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-width: 60pt;
+    animation: appear 0.3s ease-in-out;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    will-change: opacity;
+}
+
+div.loading-icon.fill, div.loading-icon.fullscreen {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--white-translucent, white);
+    z-index: 5;
+    cursor: wait;
+    border-radius: inherit;
+}
+
+div.loading-icon.fullscreen {
+    position: fixed;
+    background-color: var(--dark-shade, white);
+}
+
+div.loading-icon.remove-background {
+    background-color: transparent;
+}
+
+div.loading-icon.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.loading-icon div.loading-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60pt;
+    height: 60pt;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    cursor: wait;
+}
+
+div.loading-icon div.loading-icon-container div.loading-icon-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background-color: var(--light-blue, lightblue);
+    animation: spin 0.7s linear;
+    animation-iteration-count: infinite;
+    cursor: wait;
+    border-radius: 10%;
+}
+
+div.loading-icon div.loading-icon-container div.loading-icon-square div.loading-icon-circle {
+    display: block;
+    background-color: var(--white-static, white);
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+div.loading-icon p {
+    display: block;
+    background-color: var(--light-red, lightgray);
+    padding: 0.25em 2ex;
+    border-radius: 1.5em;
+    position: absolute;
+    top: calc(50% + 60pt);
+    left: 50%;
+    font-family: museo-sans-rounded, work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 12pt;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    cursor: wait;
+    margin: 0;
+    color: var(--white-static, darkgray);
+    animation: appear 0.3s ease-in-out;
+    text-align: center;
+    width: auto;
+    flex-shrink: 0;
+}
+
+div.loading-icon p:empty {
+    display: none;
+}

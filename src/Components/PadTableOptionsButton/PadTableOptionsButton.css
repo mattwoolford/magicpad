@@ -1,0 +1,80 @@
+span.pad-table-options-button {
+    color: var(--gray, gray);
+    background-color: var(--white, white);
+    box-shadow: 0 0 10pt -6pt var(--black, black);
+    height: calc(2em + 8pt);
+    border-radius: calc(1em + 2pt);
+    text-align: center;
+    font-size: inherit;
+    font-family: work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    width: auto;
+}
+
+span.pad-table-options-button.alert {
+    background-color: var(--light-red, coral);
+}
+
+span.pad-table-options-button img {
+    height: 60%;
+    margin-left: 2ex;
+    opacity: calc((255 - 164) / 255);
+    -webkit-filter: invert(0);
+    filter: invert(0);
+    -webkit-transition: opacity 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+    will-change: opacity, -webkit-filter, filter;
+}
+
+span.pad-table-options-button.alert img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    opacity: 1;
+}
+
+span.pad-table-options-button:hover img {
+    opacity: calc((255 - 230) / 255);
+}
+
+span.pad-table-options-button:hover img {
+    opacity: calc((255 - 164) / 255);
+}
+
+span.pad-table-options-button input, span.pad-table-options-button input:hover {
+    background-color: transparent;
+    color: var(--gray, gray);
+    border-color: transparent;
+    margin: 0;
+    opacity: 1;
+}
+
+span.pad-table-options-button:hover input {
+    color: var(--light-gray, lightgray);
+    border-color: transparent;
+    background-color: transparent;
+}
+
+span.pad-table-options-button img + input {
+    padding-left: 0.5ex;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+span.pad-table-options-button.alert input, span.pad-table-options-button.alert input:hover {
+    color: var(--white, white);
+}
+
+span.pad-table-options-button.alert input {
+    background-color: var(--light-red, coral) !important;
+    border-color: var(--light-red, coral) !important;
+}
+
+span.pad-table-options-button.alert:hover input {
+    opacity: calc((255 - 164) / 255);
+}

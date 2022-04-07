@@ -1,0 +1,63 @@
+div.checkbox-container {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+}
+
+div.checkbox-container div.checkbox {
+    justify-content: center;
+    align-items: center;
+    width: 20pt;
+    height: 20pt;
+    border-radius: 50%;
+    margin-top: 10pt;
+    border: 2pt solid var(--dark-gray, darkgray);
+    background-color: var(--very-light-gray, lightgray);
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    will-change: background-color;
+}
+
+div.checkbox-container div.checkbox:hover {
+    background-color: var(--light-blue, lightblue);
+}
+
+div.checkbox-container div.checkbox, div.checkbox * {
+    cursor: pointer;
+}
+
+div.checkbox-container div.checkbox div.check {
+    width: 80%;
+    height: 80%;
+    background-color: var(--blue, blue);
+    border-radius: 50%;
+}
+
+div.checkbox-container div.checkbox + p {
+    margin: 10pt 0 0 10pt;
+    line-height: 20pt;
+    color: var(--gray, gray);
+    -webkit-transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    will-change: color;
+}
+
+div.checkbox-container div.checkbox.checked + p {
+    color: var(--blue, blue);
+}
+
+div.checkbox-container input {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+}

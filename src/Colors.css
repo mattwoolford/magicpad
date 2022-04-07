@@ -1,0 +1,25 @@
+:root {
+    --black: #000000;
+    --blue: rgba(4, 136, 208, 1);
+    --blue-translucent: rgba(104, 183, 226, 0.5);
+    --blue-transparent: rgba(104, 183, 226, 0);
+    --dark-gray: #5A5A5A;
+    --dark-red: #E61616;
+    --dark-shade: rgba(0, 0, 0, 0.3);
+    --gold: rgba(222, 178, 49, 1);
+    --gray: #A4A4A4;
+    --green: #11CC43;
+    --red: rgba(255, 10, 0, 1);
+    --red-translucent: rgba(255, 58, 50, 0.8);
+    --red-transparent: rgba(255, 58, 50, 0);
+    --light-blue: rgba(104, 183, 226, 1);
+    --light-gray: rgb(230, 230, 230);
+    --lighter-gray: rgb(200, 200, 200);
+    --light-red: #FF6C66;
+    --shade: rgba(0, 0, 0, 0.1);
+    --very-dark-gray: #333333;
+    --very-light-gray: rgb(245, 245, 245);
+    --white: rgb(255, 255, 255);
+    --white-static: rgb(255, 255, 255);
+    --white-translucent: rgba(255, 255, 255, 0.85);
+}

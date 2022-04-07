@@ -1,0 +1,62 @@
+div.page {
+    width: 100%;
+    height: auto;
+    min-height: calc(100% - 50pt - 60pt);
+    padding: 0;
+}
+
+div.page.enable-scroll {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: calc(100vh - 50pt - 60pt - 20pt - 100pt);
+    scroll-padding-top: 20pt;
+    padding-top: 20pt;
+    scroll-padding-bottom: 100pt;
+    padding-bottom: 100pt;
+    min-height: unset;
+}
+
+div.page::-webkit-scrollbar {
+    display: none;
+}
+
+div.page.ignore-footer {
+    min-height: calc(100% - 50pt);
+}
+
+@supports (padding: max(0px)) {
+
+    div.page {
+        /*min-height: calc(100vh - 105pt - env(safe-area-inset-top) - env(safe-area-inset-bottom));*/
+        box-sizing: content-box;
+        min-height: calc(100% - 50pt - 60pt - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+        width: calc(100% - env(safe-area-inset-right) - env(safe-area-inset-left));
+    }
+
+    div.page.enable-scroll {
+        /*Dimensions add 20pt padding top and bottom to scroll container*/
+        height: calc(100vh - 50pt - 60pt - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 100pt - env(safe-area-inset-bottom));
+        min-height: unset;
+        scroll-padding-top: 20pt;
+        scroll-padding-bottom: calc(100pt + env(safe-area-inset-bottom));
+        padding-top: 20pt;
+        padding-bottom: calc(100pt + env(safe-area-inset-bottom));
+    }
+
+    div.page.ignore-footer {
+        min-height: calc(100% - 50pt - 60pt - env(safe-area-inset-top));
+    }
+
+}
+
+div.page > * {
+    flex-grow: 1;
+}
+
+div.page.enable-scroll > * {
+    scroll-snap-align: start;
+}

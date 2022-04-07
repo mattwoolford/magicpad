@@ -1,0 +1,80 @@
+div.manage-recipes {
+    width: 100%;
+    height: auto;
+    padding: 0 20pt;
+}
+
+div.manage-recipes h1 {
+    margin-bottom: 20pt;
+    scroll-snap-align: start;
+}
+
+div.manage-recipes div.edit-area {
+    margin-top: 30pt;
+}
+
+div.manage-recipes div.edit-area h2 {
+    margin-bottom: 20pt;
+    scroll-snap-align: start;
+}
+
+div.manage-recipes form div.edit-area h3, div.manage-recipes form div.edit-area label, div.manage-recipes form div.edit-area input, div.manage-recipes form div.edit-area select {
+    scroll-snap-align: start;
+}
+
+div.manage-recipes form div.edit-area div.edit-recipes-add-ingredient-area {
+    background-color: var(--white, white);
+    box-shadow: 0 0 10pt -8pt var(--black, black);
+    width: 100%;
+    height: auto;
+    padding: 10pt 20pt;
+    border-radius: 10pt;
+    margin-bottom: 20pt;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+div.manage-recipes form div.edit-area div.edit-recipes-add-ingredient-area h3 {
+    color: var(--dark-gray, darkgray);
+}
+
+div.manage-recipes form div.edit-area span.edit-recipes-add-ingredient-area input[type="button"] {
+    align-self: flex-end;
+    flex-grow: 0;
+}
+
+div.manage-recipes form div.edit-area span.edit-recipes-ingredients-container {
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    scroll-snap-align: start;
+    padding: 5pt 0;
+}
+
+div.manage-recipes form div.edit-area span.edit-recipes-ingredients-container p {
+    font-family: work-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 12pt;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-gray, darkgray);
+}
+
+div.manage-recipes form div.edit-area span.edit-recipes-ingredients-container input[type="button"] {
+    width: 20pt;
+    height: 20pt;
+    line-height: 20pt;
+    font-size: 12pt;
+    padding: 0;
+    background-color: var(--red, red);
+    border-color: var(--red, red);
+}
+
+div.manage-recipes form div.edit-area span.edit-recipes-ingredients-container input[type="button"]:hover {
+    color: var(--white-static, white);
+    border-color: var(--light-red, coral);
+    background-color: var(--light-red, coral);
+}

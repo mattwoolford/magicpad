@@ -1,0 +1,14 @@
+div.manage-stock {
+    width: 100%;
+    height: auto;
+    padding: 0 20pt;
+}
+
+div.manage-stock h1 {
+    margin-bottom: 20pt;
+    scroll-snap-align: start;
+}
+
+div.manage-stock form, div.manage-stock form label, div.manage-stock form input {
+    scroll-snap-align: start;
+}

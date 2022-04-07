@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+Magic_Pad.egg-info/PKG-INFO
+Magic_Pad.egg-info/SOURCES.txt
+Magic_Pad.egg-info/dependency_links.txt
+Magic_Pad.egg-info/top_level.txt
